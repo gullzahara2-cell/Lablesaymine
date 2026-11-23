@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LABELSAYMINE | Modest Wear (Demo)</title>
+  <meta name="description" content="LABELSAYMINE - demo storefront for modest wear made in small batches.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "LABELSAYMINE",
+        "url": "https://DOMAIN-TO-BE-CONFIRMED/"
+      },
+      {
+        "@type": "WebSite",
+        "name": "LABELSAYMINE",
+        "url": "https://DOMAIN-TO-BE-CONFIRMED/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://DOMAIN-TO-BE-CONFIRMED/pages/zoeken.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement" role="region" aria-label="Store announcements">
+    <p id="announcement-text">Free shipping from EUR 75 (NL)</p>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="menu-toggle" id="menu-toggle"
+              aria-expanded="false" aria-controls="main-nav"
+              aria-label="Open menu">Menu</button>
+
+      <a href="index.html" class="logo">LABELSAYMINE</a>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="has-sub">
+            <a href="pages/winkel.html">Shop</a>
+            <ul class="submenu">
+              <li><a href="pages/jurken.html">Dresses</a></li>
+              <li><a href="pages/breisels.html">Knitwear</a></li>
+              <li><a href="pages/co-ord-sets.html">Co-ord Sets</a></li>
+              <li><a href="pages/abayas.html">Abayas</a></li>
+              <li><a href="pages/rokken.html">Skirts</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/nieuw.html">New In</a></li>
+          <li><a href="pages/over-ons.html">About</a></li>
+          <li><a href="pages/journal.html">Journal</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="pages/zoeken.html">Search</a>
+        <a href="pages/mijn-account.html">Account</a>
+        <a href="pages/winkelwagen.html">Cart (<span id="cart-count">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero (DEMO copy and image) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="hero-label">New season (demo)</p>
+        <h1 id="hero-title">Timeless essentials, chosen with care for everyday life</h1>
+        <p>Calm, structured essentials in natural fibers for a slow, thoughtful wardrobe.</p>
+        <a href="pages/nieuw.html" class="btn btn-primary">Shop New In</a>
+        <a href="pages/winkel.html" class="btn btn-outline">Shop all</a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="products/dress1200.jpg"
+          srcset="products/dress.jpg 600w, products/dress1200.jpg 1200w"
+          sizes="(max-width: 700px) 100vw, 580px"
+          alt="Modest dress"
+          width="1200" height="1500"
+          fetchpriority="high"
+          style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust-strip" aria-label="Store promises">
+      <ul>
+        <li>Free shipping from EUR 75 (NL)</li>
+        <li>Made in Europe</li>
+        <li>Small batches</li>
+      </ul>
+    </section>
+
+    <!-- Shop by Category (DEMO images) -->
+    <section class="categories" aria-labelledby="cat-title">
+      <h2 id="cat-title">Shop by Category</h2>
+      <ul class="category-grid">
+        <li>
+          <a href="pages/jurken.html">
+            <span class="cat-img">
+              <img src="products/dress.jpg" alt="Dresses category" style="width:100%;height:100%;object-fit:cover;">
+            </span>
+            <span class="cat-name">Dresses</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/breisels.html">
+            <span class="cat-img">
+              <img src="products/knit.jpg" alt="Knitwear category" style="width:100%;height:100%;object-fit:cover;">
+            </span>
+            <span class="cat-name">Knitwear</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/co-ord-sets.html">
+            <span class="cat-img">
+              <img src="products/kurta-1-1200.webp.jpg" alt="Co-ord Sets category" style="width:100%;height:100%;object-fit:cover;">
+            </span>
+            <span class="cat-name">Co-ord Sets</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/abayas.html">
+            <span class="cat-img">
+              <img src="products/abay.jpg" alt="Abayas category" style="width:100%;height:100%;object-fit:cover;">
+            </span>
+            <span class="cat-name">Abayas</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/rokken.html">
+            <span class="cat-img">
+              <img src="products/abaya.jpg" alt="Skirts category" style="width:100%;height:100%;object-fit:cover;">
+            </span>
+            <span class="cat-name">Skirts</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/nieuw.html">
+            <span class="cat-img">
+              <img src="products/ababya-600.jpg" alt="New In category" style="width:100%;height:100%;object-fit:cover;">
+            </span>
+            <span class="cat-name">New In</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Featured products (DEMO data) -->
+    <section class="featured" aria-labelledby="feat-title">
+      <h2 id="feat-title">Our Vision</h2>
+      <p class="demo-note">Clothes that feel calm, honest and made to last. less noise, more meaning.</p>
+      <ul class="product-grid" id="featured-grid"></ul>
+    </section>
+
+    <!-- Shop de look (DEMO) -->
+    <section class="look" aria-labelledby="look-title">
+      <div class="look-image" role="img" aria-label="Demo editorial image">
+        <img src="products/dress1200.jpg" alt="Editorial look" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="look-text">
+        <h2 id="look-title">Shop de look</h2>
+        <p>Demo text. Hier komt later de echte tekst van de klant.</p>
+        <a href="pages/winkel.html" class="btn btn-primary">Shop the look</a>
+      </div>
+    </section>
+
+    <!-- Onze visie (DEMO) -->
+    <section class="vision" aria-labelledby="vision-title">
+      <h2 id="vision-title">Onze visie</h2>
+      <p>Demo text. Brand vision copy will be supplied by the client.</p>
+    </section>
+
+    <!-- Service bar -->
+    <section class="service-bar" aria-label="Service promises">
+      <ul>
+        <li>Free shipping from EUR 75</li>
+        <li>14-day returns</li>
+        <li>Secure iDEAL checkout</li>
+        <li>Made in Europe</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Newsletter (DEMO - nothing is sent or saved) -->
+  <section class="newsletter" aria-labelledby="news-title">
+    <h2 id="news-title">Stay in the loop</h2>
+    <form id="newsletter-form" novalidate>
+      <label for="news-email">Email address</label>
+      <input type="email" id="news-email" name="email" autocomplete="email" required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+      <label class="consent">
+        <input type="checkbox" id="news-consent" required>
+        I agree to receive emails (privacy link will be added)
+      </label>
+      <p id="news-message" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="pages/winkel.html">Shop</a></li>
+          <li><a href="pages/nieuw.html">New In</a></li>
+          <li><a href="pages/jurken.html">Dresses</a></li>
+          <li><a href="pages/abayas.html">Abayas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="pages/veelgestelde-vragen.html">FAQ</a></li>
+          <li><a href="pages/verzending.html">Shipping</a></li>
+          <li><a href="pages/retourneren.html">Returns</a></li>
+          <li><a href="pages/maattabel.html">Size Guide</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="pages/over-ons.html">About us</a></li>
+          <li><a href="pages/journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Business details</h3>
+        <p>PLACEHOLDER: legal name, address, KvK and BTW numbers, contact email will be supplied by the client.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Payment methods: iDEAL (more to be confirmed)</p>
+      <ul>
+        <li><a href="pages/privacybeleid.html">Privacy</a></li>
+        <li><a href="pages/algemene-voorwaarden.html">Terms</a></li>
+        <li><a href="pages/cookiebeleid.html">Cookies</a></li>
+      </ul>
+      <p>&copy; LABELSAYMINE (demo site)</p>
+    </div>
+  </footer>
+<script src="js/products.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/cookies.js"></script>
+</body>
+</html>

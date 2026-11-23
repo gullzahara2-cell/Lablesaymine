@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order confirmation | LABELSAYMINE (Demo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="page">
+    <div id="conf-none" class="empty-state" hidden>
+      <p>No recent order found.</p>
+      <a href="winkel.html" class="btn btn-primary">Continue shopping</a>
+    </div>
+
+    <div id="conf-wrap" class="confirmation" hidden>
+      <h1 class="page-title">Thank you for your order</h1>
+      <p class="demo-note">Demo order: no payment was taken and no email was sent.</p>
+
+      <p class="conf-number">Order number: <strong id="c-number"></strong></p>
+
+      <div class="conf-grid">
+        <section aria-labelledby="c-items-title">
+          <h2 id="c-items-title">Your items</h2>
+          <ul id="c-items" class="co-lines"></ul>
+          <p class="sum-row"><span>Subtotal (incl. btw)</span> <strong id="c-subtotal"></strong></p>
+          <p class="sum-row"><span>Shipping</span> <span id="c-shipping"></span></p>
+          <p class="sum-row sum-total"><span>Total (incl. btw)</span> <strong id="c-total"></strong></p>
+        </section>
+
+        <section aria-labelledby="c-del-title">
+          <h2 id="c-del-title">Delivery</h2>
+          <p id="c-name"></p>
+          <p id="c-street"></p>
+          <p id="c-city"></p>
+          <p id="c-country"></p>
+          <p id="c-email" class="small-note"></p>
+          <p class="small-note">Delivery estimate: PLACEHOLDER, to be confirmed by the client (dispatch cut-off and carrier).</p>
+          <p class="small-note">Returns: 14-day returns. <a href="retourneren.html">Read the returns instructions</a>.</p>
+        </section>
+      </div>
+
+      <a href="winkel.html" class="btn btn-outline">Continue shopping</a>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/layout.js" data-base="../"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/confirmation.js"></script>
+</body>
+</html>

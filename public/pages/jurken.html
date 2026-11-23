@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dresses | LABELSAYMINE (Demo)</title>
+  <meta name="description" content="Dresses from LABELSAYMINE (demo page).">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-category="Dresses">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="page">
+    <h1 class="page-title">Dresses</h1>
+    <p class="cat-intro">PLACEHOLDER: unique Dutch introduction text for Dresses will be supplied by the client.</p>
+    <p class="demo-note">Buying note: PLACEHOLDER (fabric, fit, modest coverage). Demo products, prices incl. btw.</p>
+
+    <form class="filters three" aria-label="Filter and sort products" onsubmit="return false">
+      <div>
+        <label for="f-avail">Availability</label>
+        <select id="f-avail">
+          <option value="">All</option>
+          <option value="in">In stock only</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-price">Price</label>
+        <select id="f-price">
+          <option value="">Any price</option>
+          <option value="u50">Under EUR 50</option>
+          <option value="50-75">EUR 50 - 75</option>
+          <option value="o75">Over EUR 75</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-sort">Sort by</label>
+        <select id="f-sort">
+          <option value="featured">Featured</option>
+          <option value="newest">Newest</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+        </select>
+      </div>
+    </form>
+
+    <p id="result-count" class="result-count" role="status" aria-live="polite"></p>
+    <ul class="product-grid" id="cat-grid"></ul>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <p>No products match your filters.</p>
+      <button type="button" class="btn btn-outline" id="clear-filters">Clear filters</button>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/layout.js" data-base="../"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/category.js"></script>
+</body>
+</html>

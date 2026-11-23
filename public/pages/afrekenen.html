@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | LABELSAYMINE (Demo)</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="page">
+    <h1 class="page-title">Checkout</h1>
+    <p class="demo-note">Demo checkout: no real payment is taken.</p>
+
+    <div id="co-empty" class="empty-state" hidden>
+      <p>Your cart is empty.</p>
+      <a href="winkel.html" class="btn btn-primary">Continue shopping</a>
+    </div>
+
+    <div id="co-wrap" class="checkout-layout" hidden>
+      <form id="checkout-form" novalidate>
+        <div id="error-summary" class="error-summary" role="alert" tabindex="-1" hidden></div>
+
+        <fieldset>
+          <legend>Contact</legend>
+          <p class="small-note">Checking out as guest. Accounts come later.</p>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" autocomplete="email" required>
+            <span class="field-error" id="err-email"></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery address</legend>
+          <div class="field">
+            <label for="country">Country</label>
+            <select id="country">
+              <option value="NL">Netherlands</option>
+              <option value="BE">Belgium</option>
+              <option value="DE">Germany</option>
+              <option value="EU">Other EU country</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="firstname">First name</label>
+              <input type="text" id="firstname" autocomplete="given-name" required>
+              <span class="field-error" id="err-firstname"></span>
+            </div>
+            <div class="field">
+              <label for="lastname">Last name</label>
+              <input type="text" id="lastname" autocomplete="family-name" required>
+              <span class="field-error" id="err-lastname"></span>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="postcode">Postcode</label>
+              <input type="text" id="postcode" autocomplete="postal-code" required>
+              <span class="field-error" id="err-postcode"></span>
+            </div>
+            <div class="field">
+              <label for="housenr">House number</label>
+              <input type="text" id="housenr" required>
+              <span class="field-error" id="err-housenr"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="street">Street</label>
+            <input type="text" id="street" autocomplete="address-line1" required>
+            <span class="field-error" id="err-street"></span>
+          </div>
+          <div class="field">
+            <label for="city">City</label>
+            <input type="text" id="city" autocomplete="address-level2" required>
+            <span class="field-error" id="err-city"></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Shipping method</legend>
+          <div id="ship-methods"></div>
+          <p class="small-note">Shipping rates shown are DEMO. Real rates will be supplied by the client.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <label class="radio-row">
+            <input type="radio" name="pay" value="ideal" checked>
+            iDEAL (demo, not connected)
+          </label>
+          <p class="small-note">Real payment via Mollie will be connected after test orders and merchant details are ready.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Consent</legend>
+          <label class="radio-row">
+            <input type="checkbox" id="consent">
+            <span>I have read the <a href="privacybeleid.html" target="_blank" rel="noopener">privacy policy</a> and the <a href="algemene-voorwaarden.html" target="_blank" rel="noopener">terms and conditions</a>.</span>
+          </label>
+          <span class="field-error" id="err-consent"></span>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary btn-block">Place order (demo)</button>
+      </form>
+
+      <aside class="cart-summary" aria-label="Order review">
+        <h2>Order review</h2>
+        <ul id="co-lines" class="co-lines"></ul>
+        <p class="sum-row"><span>Subtotal (incl. btw)</span> <strong id="co-subtotal"></strong></p>
+        <p class="sum-row"><span>Shipping</span> <span id="co-shipping"></span></p>
+        <p class="sum-row sum-total"><span>Total (incl. btw)</span> <strong id="co-total"></strong></p>
+        <p class="small-note"><a href="winkelwagen.html">Edit cart</a></p>
+      </aside>
+    </div>
+  </main>
+
+ <div id="site-footer"></div>
+
+  <script src="../js/layout.js" data-base="../"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

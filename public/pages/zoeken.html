@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search | LABELSAYMINE (Demo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="page">
+    <h1 class="page-title">Search</h1>
+
+    <form class="search-form" role="search" action="zoeken.html" method="get">
+      <label for="search-input">Search products and categories</label>
+      <div class="search-row">
+        <input type="search" id="search-input" name="q" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+
+    <p id="search-status" class="result-count" role="status" aria-live="polite"></p>
+
+    <section id="cat-results" hidden>
+      <h2 class="sub-title">Categories</h2>
+      <ul id="cat-list" class="cat-links"></ul>
+    </section>
+<section id="art-results" hidden>
+      <h2 class="sub-title">Journal</h2>
+      <ul id="art-list" class="cat-links"></ul>
+    </section>
+    <section id="prod-results" hidden>
+      <h2 class="sub-title">Products</h2>
+      <ul class="product-grid" id="search-grid"></ul>
+    </section>
+
+    <section id="no-results" class="empty-state" hidden>
+      <p>No results found. Try another word, or browse our popular categories:</p>
+      <ul class="cat-links" id="popular-list"></ul>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/layout.js" data-base="../"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/journal-data.js"></script>
+  <script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | LABELSAYMINE (Demo)</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="page">
+    <h1 class="page-title">Cart</h1>
+
+    <div id="cart-empty" class="empty-state" hidden>
+      <p>Your cart is empty.</p>
+      <a href="winkel.html" class="btn btn-primary">Continue shopping</a>
+    </div>
+
+    <div id="cart-full" class="cart-layout" hidden>
+      <div>
+        <p id="ship-progress" class="ship-progress" role="status" aria-live="polite"></p>
+        <div class="progress-track" aria-hidden="true"><div id="progress-bar" class="progress-bar"></div></div>
+        <ul id="cart-lines" class="cart-lines"></ul>
+      </div>
+
+      <aside class="cart-summary" aria-label="Order summary">
+        <h2>Summary</h2>
+        <p class="sum-row"><span>Subtotal (incl. btw)</span> <strong id="sum-subtotal"></strong></p>
+        <p class="sum-row"><span>Shipping</span> <span id="sum-shipping"></span></p>
+
+        <label for="coupon">Coupon code</label>
+        <div class="coupon-row">
+          <input type="text" id="coupon" autocomplete="off">
+          <button type="button" class="btn btn-outline" id="coupon-btn">Apply</button>
+        </div>
+        <p id="coupon-msg" role="status" aria-live="polite"></p>
+
+        <a href="afrekenen.html" class="btn btn-primary btn-block">Go to checkout</a>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/layout.js" data-base="../"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+</html>

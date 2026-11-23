@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My account | LABELSAYMINE (Demo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="page">
+    <h1 class="page-title">My account</h1>
+    <p class="demo-note">Demo only: no password is stored and no real account is created.</p>
+
+    <!-- Logged out -->
+    <div id="auth-box" class="auth-box" hidden>
+      <div class="account-tabs">
+        <button type="button" class="tab-btn" data-panel="login" aria-pressed="true">Log in</button>
+        <button type="button" class="tab-btn" data-panel="register" aria-pressed="false">Register</button>
+        <button type="button" class="tab-btn" data-panel="reset" aria-pressed="false">Forgot password</button>
+      </div>
+
+      <form id="panel-login" class="panel" novalidate>
+        <div class="field">
+          <label for="l-email">Email address</label>
+          <input type="email" id="l-email" autocomplete="email">
+          <span class="field-error" id="err-l-email"></span>
+        </div>
+        <div class="field">
+          <label for="l-pass">Password</label>
+          <input type="password" id="l-pass" autocomplete="current-password">
+          <span class="field-error" id="err-l-pass"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Log in (demo)</button>
+      </form>
+
+      <form id="panel-register" class="panel" novalidate hidden>
+        <div class="field">
+          <label for="r-name">Name</label>
+          <input type="text" id="r-name" autocomplete="name">
+          <span class="field-error" id="err-r-name"></span>
+        </div>
+        <div class="field">
+          <label for="r-email">Email address</label>
+          <input type="email" id="r-email" autocomplete="email">
+          <span class="field-error" id="err-r-email"></span>
+        </div>
+        <div class="field">
+          <label for="r-pass">Password (at least 8 characters)</label>
+          <input type="password" id="r-pass" autocomplete="new-password">
+          <span class="field-error" id="err-r-pass"></span>
+        </div>
+        <div class="field">
+          <label for="r-pass2">Repeat password</label>
+          <input type="password" id="r-pass2" autocomplete="new-password">
+          <span class="field-error" id="err-r-pass2"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Create account (demo)</button>
+      </form>
+
+      <form id="panel-reset" class="panel" novalidate hidden>
+        <div class="field">
+          <label for="p-email">Email address</label>
+          <input type="email" id="p-email" autocomplete="email">
+          <span class="field-error" id="err-p-email"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Send reset link (demo)</button>
+      </form>
+
+      <p id="auth-msg" role="status" aria-live="polite"></p>
+    </div>
+
+    <!-- Logged in -->
+    <div id="account-box" hidden>
+      <p id="welcome" class="center-text"></p>
+
+      <section class="acc-section" aria-labelledby="orders-title">
+        <h2 id="orders-title" class="sub-title">Orders</h2>
+        <div id="orders-content"></div>
+      </section>
+
+      <section class="acc-section" aria-labelledby="addr-title">
+        <h2 id="addr-title" class="sub-title">Address book</h2>
+        <ul id="addr-list" class="addr-list"></ul>
+        <form id="addr-form" novalidate>
+          <div class="field">
+            <label for="a-street">Street</label>
+            <input type="text" id="a-street" autocomplete="address-line1">
+            <span class="field-error" id="err-a-street"></span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="a-nr">House number</label>
+              <input type="text" id="a-nr">
+              <span class="field-error" id="err-a-nr"></span>
+            </div>
+            <div class="field">
+              <label for="a-post">Postcode</label>
+              <input type="text" id="a-post" autocomplete="postal-code">
+              <span class="field-error" id="err-a-post"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="a-city">City</label>
+            <input type="text" id="a-city" autocomplete="address-level2">
+            <span class="field-error" id="err-a-city"></span>
+          </div>
+          <button type="submit" class="btn btn-outline">Add address (demo)</button>
+        </form>
+      </section>
+
+      <section class="acc-section" aria-labelledby="ret-title">
+        <h2 id="ret-title" class="sub-title">Returns</h2>
+        <p>PLACEHOLDER: return request entry point (only if returns are self-service, to be decided by the client). See the <a href="retourneren.html">returns page</a>.</p>
+      </section>
+
+      <p class="center-text"><button type="button" class="btn btn-outline" id="logout-btn">Log out</button></p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/layout.js" data-base="../"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/account.js"></script>
+</body>
+</html>
